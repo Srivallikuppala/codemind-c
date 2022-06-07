@@ -1,21 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int a,i,x,n,r,sum=0;
-    scanf("%d",&a);
-    n=a*a;
-    for(i=10;i<100000;i=i*10)
+    int n,r,a,sum=0;
+    scanf("%d",&n);
+    r=n*n;
+    while(r!=0)
     {
-        r=n%i;
-        r=(r*10)/i;
-        n=n-r;
-        sum=sum+r;
+        a=r%10;
+        r=r/10;
+        sum=sum+a;
     }
-    if(sum==a)
+    if(n==sum)
     {
         printf("Neon Number");
     }
-    else if(sum!=a)
+    else
     {
         printf("Not Neon Number");
     }
